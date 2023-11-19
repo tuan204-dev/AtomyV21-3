@@ -9,10 +9,10 @@ import SubLabel from '../SubLabel'
 
 const TopForm = () => {
   return (
-    <div className="flex flex-col rounded-[10px] overflow-hidden border-[1px] border-[#F8CBD3] top-form">
-      <div className="pt-4 px-5 pb-[6px] bg-[#F5637E]">
+    <div className="flex flex-col rounded-[10px] overflow-hidden border-[1px] border-[#F8CBD3] top-form bg-white shadow-lg">
+      {/* <div className="pt-4 px-5 pb-[6px] bg-[#F5637E]">
         <span className="text-lg text-white">1. HỒ SƠ CỦA BẠN</span>
-      </div>
+      </div> */}
       <div className="flex flex-col gap-5 p-5 lg:p-3">
         <div className="flex md:flex-col mx-[-10px] gap-y-5">
           <div className="flex-1 px-[10px] gap-y-[10px] flex flex-col">
