@@ -3,7 +3,6 @@ import ProductItem from '../Shop/product/ProductItem'
 import Carousel from 'react-elastic-carousel'
 import { FaCaretRight } from 'react-icons/fa'
 import { FaCaretLeft } from 'react-icons/fa6'
-// const handleDragStart = (e) => e.preventDefault()
 
 const breakPoints = [
   {

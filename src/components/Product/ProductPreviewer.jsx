@@ -7,22 +7,29 @@ import { FaFacebookF } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
 import { FaPinterestP } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
-// import useCard from '../../hooks/useCard'
+import useCard from '../../hooks/useCard'
+import toast from 'react-hot-toast'
 
 const ProductPreviewer = ({ product }) => {
   const [quantity, setQuantity] = useState(1)
 
   // TODO: handle logic is here
-  // const card = useCard()
+  const card = useCard()
 
-  // const handleAddToCard = () => {
-
-  // }
+  const handleAddToCard = () => {
+    card.addProduct(product?.id, quantity)
+    setQuantity(1)
+    toast.success('Đã thêm sản phẩm vào giỏ hảng!')
+  }
 
   return (
     <div className="flex h-[500px] md:h-fit pb-[30px] border-[#ececec] border-b-[1px] md:flex-col">
       <div className="flex justify-center w-1/2 overflow-hidden md:w-full">
-        <img src={product?.img} alt={product?.title} className="object-contain w-full max-w-[500px]" />
+        <img
+          src={product?.img}
+          alt={product?.title}
+          className="object-contain w-full max-w-[500px]"
+        />
       </div>
       <div className="flex flex-col w-1/2 md:w-full">
         <div className="flex gap-2 text-[#666] text-sm">
@@ -62,7 +69,10 @@ const ProductPreviewer = ({ product }) => {
               <FiPlus />
             </button>
           </div>
-          <button className="uppercase text-white text-base flex justify-center items-center bg-[#efa697] px-[18px] h-full hover:brightness-90 transition-all">
+          <button
+            onClick={handleAddToCard}
+            className="uppercase text-white text-base flex justify-center items-center bg-[#efa697] px-[18px] h-full hover:brightness-90 transition-all"
+          >
             Thêm vào giỏ hàng
           </button>
         </div>
